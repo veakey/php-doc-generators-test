@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="CommonTest" namespace="" name="CommonTest" abstract="false" final="false" start="10" end="183">
+  <file path="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests/js" file="AbstractTest.php" realpath="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests/js/AbstractTest.php" size="4818" time="2016-04-29T04:18:42+00:00" unixtime="1461903522" sha1="91b2fb3fe3fb07cc04b1ec90511447f21692a934" relative="tests/js/AbstractTest.php"/>
+  <docblock>
+    <description compact="Tests common functions of abstract Minify class by using JS implementation."/>
+  </docblock>
+  <extends full="PHPUnit_Framework_TestCase" namespace="" name="PHPUnit_Framework_TestCase" unresolved="true"/>
+  <method name="construct" start="15" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+    </docblock>
+    <inline>
+      <comment value="1 source in constructor" line="22"/>
+      <comment value="multiple sources in constructor" line="28"/>
+      <comment value="file in constructor" line="34"/>
+      <comment value="multiple files in constructor" line="40"/>
+    </inline>
+  </method>
+  <method name="add" start="50" end="86" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+    </docblock>
+    <inline>
+      <comment value="1 source in add" line="57"/>
+      <comment value="multiple sources in add" line="64"/>
+      <comment value="file in add" line="72"/>
+      <comment value="multiple files in add" line="79"/>
+    </inline>
+  </method>
+  <method name="load" start="91" end="100" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+    </docblock>
+    <inline>
+      <comment value="content greater than PHP_MAXPATHLEN" line="93"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/90" line="94"/>
+    </inline>
+  </method>
+  <method name="save" start="105" end="115" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+    </docblock>
+  </method>
+  <method name="checkFileOpenFail" start="122" end="132" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+      <expectedexception value="MatthiasMullie\Minify\Exceptions\IOException"/>
+    </docblock>
+  </method>
+  <method name="checkFileWriteFail" start="139" end="149" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+      <expectedexception value="MatthiasMullie\Minify\Exceptions\IOException"/>
+    </docblock>
+  </method>
+  <method name="gzip" start="154" end="164" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+    </docblock>
+  </method>
+  <method name="cache" start="169" end="182" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <test/>
+    </docblock>
+  </method>
+</class>

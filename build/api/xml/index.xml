@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/home/dara/Documents/work/unigestion/php-doc-generator/minify">
+  <namespace name="MatthiasMullie\Minify">
+    <class name="Exception" src="src/Exception.php" xml="classes/MatthiasMullie_Minify_Exception.xml"/>
+    <class name="Minify" src="src/Minify.php" description="Abstract minifier class." xml="classes/MatthiasMullie_Minify_Minify.xml"/>
+    <class name="JS" src="src/JS.php" description="JavaScript minifier." xml="classes/MatthiasMullie_Minify_JS.xml"/>
+    <class name="CSS" src="src/CSS.php" description="CSS minifier." xml="classes/MatthiasMullie_Minify_CSS.xml"/>
+  </namespace>
+  <namespace name="MatthiasMullie\Minify\Exceptions">
+    <class name="IOException" src="src/Exceptions/IOException.php" xml="classes/MatthiasMullie_Minify_Exceptions_IOException.xml"/>
+    <class name="BasicException" src="src/Exceptions/BasicException.php" xml="classes/MatthiasMullie_Minify_Exceptions_BasicException.xml"/>
+    <class name="FileImportException" src="src/Exceptions/FileImportException.php" xml="classes/MatthiasMullie_Minify_Exceptions_FileImportException.xml"/>
+  </namespace>
+  <namespace name="">
+    <class name="CSSTest" src="tests/css/CSSTest.php" description="CSS minifier test case." xml="classes/CSSTest.xml"/>
+    <class name="CommonTest" src="tests/js/AbstractTest.php" description="Tests common functions of abstract Minify class by using JS implementation." xml="classes/CommonTest.xml"/>
+    <class name="JSTest" src="tests/js/JSTest.php" description="JS minifier test case." xml="classes/JSTest.xml"/>
+    <class name="Exception" xml="classes/Exception.xml"/>
+  </namespace>
+</index>

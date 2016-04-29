@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - MatthiasMullie\Minify\Minify</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#MatthiasMullie_Minify">MatthiasMullie\Minify</a>
+          </li>
+          <li class="separator">Minify</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/src/Minify.php.xhtml#line17">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>MatthiasMullie\Minify\</small>Minify</h1>
+        <h4>Abstract minifier class.</h4>
+        <p>Please report bugs on https://github.com/matthiasmullie/minify/issues</p>
+        <ul>
+          <li>Author: Matthias Mullie &lt;minify@mullie.eu&gt;</li>
+          <li>Copyright: Copyright (c) 2012, Matthias Mullie. All rights reserved.</li>
+          <li>License: MIT License</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Minify
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$data</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$patterns</a> =
+                        ;
+                    </li><li>public array <a href="#members">$extracted</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/add.xhtml">add</a>()
+                    </li><li>public string <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/minify.xhtml">minify</a>()
+                    </li><li>public string <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/gzip.xhtml">gzip</a>()
+                    </li><li>public CacheItemInterface <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/cache.xhtml">cache</a>()
+                    </li><li>public abstract string <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/execute.xhtml">execute</a>()
+                    </li><li>protected string <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/load.xhtml">load</a>()
+                    </li><li>protected void <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/save.xhtml">save</a>()
+                    </li><li>protected void <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/registerPattern.xhtml">registerPattern</a>()
+                    </li><li>protected string <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/replace.xhtml">replace</a>()
+                    </li><li>protected string <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/replacePattern.xhtml">replacePattern</a>()
+                    </li><li>protected void <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/extractStrings.xhtml">extractStrings</a>()
+                    </li><li>protected string <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/restoreExtractedData.xhtml">restoreExtractedData</a>()
+                    </li><li>protected bool <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/canImportFile.xhtml">canImportFile</a>()
+                    </li><li>protected resource <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/openFileForWriting.xhtml">openFileForWriting</a>()
+                    </li><li>protected void <a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/writeToFile.xhtml">writeToFile</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="data"><strong>$data</strong>
+                —
+                array<br/><span class="indent">The data to be minified.</span></li>
+            <li id="patterns"><strong>$patterns</strong>
+                —
+                array<br/><span class="indent">Array of patterns to match.</span></li>
+          </ul>
+          <h4>public</h4>
+          <ul class="members">
+            <li id="extracted"><strong>$extracted</strong>
+                —
+                array<br/><span class="indent">This array will hold content of strings and regular expressions that have been extracted from the JS source code, so we can reliably match "code", without having to worry about potential "code-like" characters inside.</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="canImportFile"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/canImportFile.xhtml">canImportFile()</a>
+                — Check if the path is a regular file and can be read.</li>
+            <li id="extractStrings"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/extractStrings.xhtml">extractStrings()</a>
+                — Strings are a pattern we need to match, in order to ignore potential code-like content inside them, but we just want all of the string content to remain untouched.</li>
+            <li id="load"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/load.xhtml">load()</a>
+                — Load data.</li>
+            <li id="openFileForWriting"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/openFileForWriting.xhtml">openFileForWriting()</a>
+                — Attempts to open file specified by $path for writing.</li>
+            <li id="registerPattern"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/registerPattern.xhtml">registerPattern()</a>
+                — Register a pattern to execute against the source content.</li>
+            <li id="replace"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/replace.xhtml">replace()</a>
+                — We can't "just" run some regular expressions against JavaScript: it's a complex language. E.g. having an occurrence of // xyz would be a comment, unless it's used within a string. Of you could have something that looks like a 'string', but inside a comment.</li>
+            <li id="replacePattern"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/replacePattern.xhtml">replacePattern()</a>
+                — This is where a pattern is matched against $content and the matches are replaced by their respective value.</li>
+            <li id="restoreExtractedData"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/restoreExtractedData.xhtml">restoreExtractedData()</a>
+                — This method will restore all extracted data (strings, regexes) that were replaced with placeholder text in extract*(). The original content was saved in $this-&gt;extracted.</li>
+            <li id="save"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/save.xhtml">save()</a>
+                — Save to file.</li>
+            <li id="writeToFile"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/writeToFile.xhtml">writeToFile()</a>
+                — Attempts to write $content to the file specified by $handler. $path is used for printing exceptions.</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/__construct.xhtml">__construct()</a>
+                — Init the minify class - optionally, code may be passed along already.</li>
+            <li id="add"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/add.xhtml">add()</a>
+                — Add a file or straight-up code to be minified.</li>
+            <li id="cache"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/cache.xhtml">cache()</a>
+                — Minify the data &amp; write it to a CacheItemInterface object.</li>
+            <li id="execute"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/execute.xhtml">execute()</a>
+                — Minify the data.</li>
+            <li id="gzip"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/gzip.xhtml">gzip()</a>
+                — Minify &amp; gzip the data &amp; (optionally) saves it to a file.</li>
+            <li id="minify"><a title="MatthiasMullie\Minify\Minify" href="../classes/MatthiasMullie_Minify_Minify/minify.xhtml">minify()</a>
+                — Minify the data &amp; (optionally) saves it to a file.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

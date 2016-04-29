@@ -1,0 +1,324 @@
+\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS}{}\section{Matthias\+Mullie\textbackslash{}Minify\textbackslash{}C\+SS Class Reference}
+\label{classMatthiasMullie_1_1Minify_1_1CSS}\index{Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+SS@{Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+SS}}
+Inheritance diagram for Matthias\+Mullie\textbackslash{}Minify\textbackslash{}C\+SS\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMatthiasMullie_1_1Minify_1_1CSS}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a6df933605ec05a3436a6235d8687c4e1}{set\+Max\+Import\+Size} (\$size)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a893bd2d96dc1b3ead44700377997c749}{set\+Import\+Extensions} (array \$extensions)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a5d2a68fad2a4a92cba7a72198e8e1b8f}{execute} (\$path=null, \$parents=array())
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a5386ca48afa960a0d38e6a6c6cc33524}{move\+Imports\+To\+Top} (\$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a35edd8cac08f2804285f0fed59cf433d}{combine\+Imports} (\$source, \$content, \$parents)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a086c79c42e98915aea8717f3ceecd8df}{import\+Files} (\$source, \$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_ac51ff618a433cb21cac1a5461f60e83d}{move} (Converter \$converter, \$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a8cb5447bafb6729cf834342764ad2e71}{shorten\+Hex} (\$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a78937078a88a71de25f9e5004bb89ce0}{shorten\+Zeroes} (\$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a6b69c7a87572e206dd0e2da0910d4504}{strip\+Empty\+Tags} (\$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_ac819241f35b6e70212739f651fdd4d85}{strip\+Comments} ()
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_a631d8a7ad99611b7c3c21fdb22108587}{strip\+Whitespace} (\$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS_ae59315fd10d871ed39fdfa28ec47f7ed}{can\+Import\+By\+Size} (\$path)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$max\+Import\+Size} = 5\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a4a146ebaa02ef07d531a5e0760e924b9}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a4a146ebaa02ef07d531a5e0760e924b9}
+
+\item 
+{\bfseries \$import\+Extensions}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} minifier.
+
+Please report bugs on \href{https://github.com/matthiasmullie/minify/issues}{\tt https\+://github.\+com/matthiasmullie/minify/issues}
+
+\begin{DoxyAuthor}{Author}
+Matthias Mullie \href{mailto:minify@mullie.eu}{\tt minify@mullie.\+eu} 
+
+Tijs Verkoyen \href{mailto:minify@verkoyen.eu}{\tt minify@verkoyen.\+eu} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2012, Matthias Mullie. All rights reserved.  M\+IT License 
+\end{DoxyCopyright}
+
+
+\subsection{Member Function Documentation}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!can\+Import\+By\+Size@{can\+Import\+By\+Size}}
+\index{can\+Import\+By\+Size@{can\+Import\+By\+Size}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{can\+Import\+By\+Size(\$path)}{canImportBySize($path)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::can\+Import\+By\+Size (
+\begin{DoxyParamCaption}
+\item[{}]{\$path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_ae59315fd10d871ed39fdfa28ec47f7ed}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_ae59315fd10d871ed39fdfa28ec47f7ed}
+Check if file is small enough to be imported.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & The path to the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!combine\+Imports@{combine\+Imports}}
+\index{combine\+Imports@{combine\+Imports}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{combine\+Imports(\$source, \$content, \$parents)}{combineImports($source, $content, $parents)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::combine\+Imports (
+\begin{DoxyParamCaption}
+\item[{}]{\$source, }
+\item[{}]{\$content, }
+\item[{}]{\$parents}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a35edd8cac08f2804285f0fed59cf433d}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a35edd8cac08f2804285f0fed59cf433d}
+Combine \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} from import statements.
+
+\textquotesingle{}s will be loaded and their content merged into the original file, to save H\+T\+TP requests.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$source} & The file to combine imports for. \\
+\hline
+string & {\em \$content} & The \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} content to combine imports for. \\
+\hline
+ & {\em string\mbox{[}$\,$\mbox{]}} & \$parents Parent paths, for circular reference checks.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Import\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!execute@{execute}}
+\index{execute@{execute}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{execute(\$path=null, \$parents=array())}{execute($path=null, $parents=array())}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::execute (
+\begin{DoxyParamCaption}
+\item[{}]{\$path = {\ttfamily null}, }
+\item[{}]{\$parents = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a5d2a68fad2a4a92cba7a72198e8e1b8f}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a5d2a68fad2a4a92cba7a72198e8e1b8f}
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify}{Minify} the data. Perform \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} optimizations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\mbox{[}optional\mbox{]}} & \$path Path to write the data to. \\
+\hline
+{\em string\mbox{[}$\,$\mbox{]}} & \$parents Parent paths, for circular reference checks.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The minified data. 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!import\+Files@{import\+Files}}
+\index{import\+Files@{import\+Files}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{import\+Files(\$source, \$content)}{importFiles($source, $content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::import\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{\$source, }
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a086c79c42e98915aea8717f3ceecd8df}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a086c79c42e98915aea8717f3ceecd8df}
+Import files into the \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS}, base64-\/ized.
+
+(image.\+jpg) images will be loaded and their content merged into the original file, to save H\+T\+TP requests.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$source} & The file to import files for. \\
+\hline
+string & {\em \$content} & The \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} content to import files for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!move@{move}}
+\index{move@{move}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{move(\+Converter \$converter, \$content)}{move(Converter $converter, $content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::move (
+\begin{DoxyParamCaption}
+\item[{Converter}]{\$converter, }
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_ac51ff618a433cb21cac1a5461f60e83d}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_ac51ff618a433cb21cac1a5461f60e83d}
+Moving a css file should update all relative urls. Relative references (e.\+g. ../images/image.gif) in a certain css file, will have to be updated when a file is being saved at another location (e.\+g. ../../images/image.gif, if the new \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} file is 1 folder deeper).
+
+
+\begin{DoxyParams}[1]{Parameters}
+Converter & {\em \$converter} & Relative path converter \\
+\hline
+string & {\em \$content} & The \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} content to update relative urls for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!move\+Imports\+To\+Top@{move\+Imports\+To\+Top}}
+\index{move\+Imports\+To\+Top@{move\+Imports\+To\+Top}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{move\+Imports\+To\+Top(\$content)}{moveImportsToTop($content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::move\+Imports\+To\+Top (
+\begin{DoxyParamCaption}
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a5386ca48afa960a0d38e6a6c6cc33524}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a5386ca48afa960a0d38e6a6c6cc33524}
+Move any import statements to the top.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & Nearly finished \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} content\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!set\+Import\+Extensions@{set\+Import\+Extensions}}
+\index{set\+Import\+Extensions@{set\+Import\+Extensions}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{set\+Import\+Extensions(array \$extensions)}{setImportExtensions(array $extensions)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::set\+Import\+Extensions (
+\begin{DoxyParamCaption}
+\item[{array}]{\$extensions}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a893bd2d96dc1b3ead44700377997c749}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a893bd2d96dc1b3ead44700377997c749}
+Set the type of extensions to be imported into the \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} (to save network connections). Keys of the array should be the file extensions \& respective values should be the data type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\mbox{[}$\,$\mbox{]}} & \$extensions Array of file extensions \\
+\hline
+\end{DoxyParams}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!set\+Max\+Import\+Size@{set\+Max\+Import\+Size}}
+\index{set\+Max\+Import\+Size@{set\+Max\+Import\+Size}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{set\+Max\+Import\+Size(\$size)}{setMaxImportSize($size)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::set\+Max\+Import\+Size (
+\begin{DoxyParamCaption}
+\item[{}]{\$size}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a6df933605ec05a3436a6235d8687c4e1}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a6df933605ec05a3436a6235d8687c4e1}
+Set the maximum size if files to be imported.
+
+Files larger than this size (in kB) will not be imported into the \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS}. Importing files into the \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} as data-\/uri will save you some connections, but we should only import relatively small decorative images so that our \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} file doesn\textquotesingle{}t get too bulky.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$size} & Size in kB \\
+\hline
+\end{DoxyParams}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!shorten\+Hex@{shorten\+Hex}}
+\index{shorten\+Hex@{shorten\+Hex}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{shorten\+Hex(\$content)}{shortenHex($content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::shorten\+Hex (
+\begin{DoxyParamCaption}
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a8cb5447bafb6729cf834342764ad2e71}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a8cb5447bafb6729cf834342764ad2e71}
+Shorthand hex color codes. \#\+F\+F0000 -\/$>$ \#\+F00.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & The \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} content to shorten the hex color codes for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!shorten\+Zeroes@{shorten\+Zeroes}}
+\index{shorten\+Zeroes@{shorten\+Zeroes}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{shorten\+Zeroes(\$content)}{shortenZeroes($content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::shorten\+Zeroes (
+\begin{DoxyParamCaption}
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a78937078a88a71de25f9e5004bb89ce0}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a78937078a88a71de25f9e5004bb89ce0}
+Shorthand 0 values to plain 0, instead of e.\+g. -\/0em.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & The \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} content to shorten the zero values for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!strip\+Comments@{strip\+Comments}}
+\index{strip\+Comments@{strip\+Comments}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{strip\+Comments()}{stripComments()}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::strip\+Comments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_ac819241f35b6e70212739f651fdd4d85}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_ac819241f35b6e70212739f651fdd4d85}
+Strip comments from source code. \index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!strip\+Empty\+Tags@{strip\+Empty\+Tags}}
+\index{strip\+Empty\+Tags@{strip\+Empty\+Tags}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{strip\+Empty\+Tags(\$content)}{stripEmptyTags($content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::strip\+Empty\+Tags (
+\begin{DoxyParamCaption}
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a6b69c7a87572e206dd0e2da0910d4504}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a6b69c7a87572e206dd0e2da0910d4504}
+Strip comments from source code.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!strip\+Whitespace@{strip\+Whitespace}}
+\index{strip\+Whitespace@{strip\+Whitespace}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{strip\+Whitespace(\$content)}{stripWhitespace($content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::strip\+Whitespace (
+\begin{DoxyParamCaption}
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a631d8a7ad99611b7c3c21fdb22108587}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a631d8a7ad99611b7c3c21fdb22108587}
+Strip whitespace.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & The \hyperlink{classMatthiasMullie_1_1Minify_1_1CSS}{C\+SS} content to strip the whitespace for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}!\$import\+Extensions@{\$import\+Extensions}}
+\index{\$import\+Extensions@{\$import\+Extensions}!Matthias\+Mullie\+::\+Minify\+::\+C\+SS@{Matthias\+Mullie\+::\+Minify\+::\+C\+SS}}
+\subsubsection[{\texorpdfstring{\$import\+Extensions}{$importExtensions}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+C\+S\+S\+::\$import\+Extensions\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1CSS_a3d64d097fdfd18b29cca83645f1124c1}{}\label{classMatthiasMullie_1_1Minify_1_1CSS_a3d64d097fdfd18b29cca83645f1124c1}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= array(
+        \textcolor{stringliteral}{'gif'} => \textcolor{stringliteral}{'data:image/gif'},
+        \textcolor{stringliteral}{'png'} => \textcolor{stringliteral}{'data:image/png'},
+        \textcolor{stringliteral}{'jpe'} => \textcolor{stringliteral}{'data:image/jpeg'},
+        \textcolor{stringliteral}{'jpg'} => \textcolor{stringliteral}{'data:image/jpeg'},
+        \textcolor{stringliteral}{'jpeg'} => \textcolor{stringliteral}{'data:image/jpeg'},
+        \textcolor{stringliteral}{'svg'} => \textcolor{stringliteral}{'data:image/svg+xml'},
+        \textcolor{stringliteral}{'woff'} => \textcolor{stringliteral}{'data:application/x-font-woff'},
+        \textcolor{stringliteral}{'tif'} => \textcolor{stringliteral}{'image/tiff'},
+        \textcolor{stringliteral}{'tiff'} => \textcolor{stringliteral}{'image/tiff'},
+        \textcolor{stringliteral}{'xbm'} => \textcolor{stringliteral}{'image/x-xbitmap'},
+    )
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+minify/src/C\+S\+S.\+php\end{DoxyCompactItemize}

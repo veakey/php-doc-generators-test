@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#MatthiasMullie_Minify">MatthiasMullie\Minify</a>
+          </li>
+          <li class="separator">
+            <a title="MatthiasMullie\Minify\JS" href="../../classes/MatthiasMullie_Minify_JS.xhtml">JS</a>
+          </li>
+          <li class="separator">stripWhitespace</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/src/JS.php.xhtml#line245">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>MatthiasMullie\Minify\JS::</small>stripWhitespace</h1>
+        <h4>Strip whitespace.</h4>
+        <p>We won't strip *all* whitespace, but as much as possible. The thing that
+we'll preserve are newlines we're unsure about.
+JavaScript doesn't require statements to be terminated with a semicolon.
+It will automatically fix missing semicolons with ASI (automatic semi-
+colon insertion) at the end of line causing errors (without semicolon.)
+
+Because it's sometimes hard to tell if a newline is part of a statement
+that should be terminated or not, we'll just leave some of them alone.</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>protected function stripWhitespace(string
+        $content )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$content</code>
+                —
+                string</dt>
+          <dd>The content to strip the whitespace for.</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>string</dt>
+          <dd/>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

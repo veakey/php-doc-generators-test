@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="MatthiasMullie\Minify\CSS" namespace="MatthiasMullie\Minify" name="CSS" abstract="false" final="false" start="18" end="597">
+  <file path="/home/dara/Documents/work/unigestion/php-doc-generator/minify/src" file="CSS.php" realpath="/home/dara/Documents/work/unigestion/php-doc-generator/minify/src/CSS.php" size="19189" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="31fcaf95f0f45814f307c1dd86263041f06dda3c" relative="src/CSS.php"/>
+  <docblock>
+    <description compact="CSS minifier.">Please report bugs on https://github.com/matthiasmullie/minify/issues</description>
+    <author value="Matthias Mullie &lt;minify@mullie.eu&gt;"/>
+    <author value="Tijs Verkoyen &lt;minify@verkoyen.eu&gt;"/>
+    <copyright value="Copyright (c) 2012, Matthias Mullie. All rights reserved."/>
+    <license name="MIT License"/>
+  </docblock>
+  <extends full="MatthiasMullie\Minify\Minify" namespace="MatthiasMullie\Minify" name="Minify"/>
+  <member name="maxImportSize" type="integer" default="5" visibility="protected" static="false" line="23">
+    <docblock>
+      <description/>
+      <var type="int"/>
+    </docblock>
+  </member>
+  <member name="importExtensions" type="array" default="" visibility="protected" static="false" line="28">
+    <docblock>
+      <description/>
+      <var type="array" of="object">
+        <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+      </var>
+    </docblock>
+  </member>
+  <method name="setMaxImportSize" start="51" end="54" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the maximum size if files to be imported.">Files larger than this size (in kB) will not be imported into the CSS.
+Importing files into the CSS as data-uri will save you some connections,
+but we should only import relatively small decorative images so that our
+CSS file doesn't get too bulky.</description>
+      <param description="Size in kB" type="int" variable="$size"/>
+    </docblock>
+    <parameter name="size" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setImportExtensions" start="64" end="67" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Set the type of extensions to be imported into the CSS (to save network connections).">Keys of the array should be the file extensions &amp; respective values
+should be the data type.</description>
+      <param description="Array of file extensions" type="array" variable="$extensions" of="object">
+        <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+      </param>
+    </docblock>
+    <parameter name="extensions" byreference="false" type="array"/>
+  </method>
+  <method name="moveImportsToTop" start="76" end="89" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Move any import statements to the top."/>
+      <param description="Nearly finished CSS content" type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="combineImports" start="105" end="241" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Combine CSS from import statements."/>
+      <import value="'s will be loaded and their content merged into the original file,">to save HTTP requests.</import>
+      <param description="The file to combine imports for." type="string" variable="$source"/>
+      <param description="The CSS content to combine imports for." type="string" variable="$content"/>
+      <param description="Parent paths, for circular reference checks." type="array" variable="$parents" of="object">
+        <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+      </param>
+      <return type="string"/>
+      <throws type="object">
+        <type full="MatthiasMullie\Minify\Exceptions\FileImportException" namespace="MatthiasMullie\Minify\Exceptions" name="FileImportException"/>
+      </throws>
+    </docblock>
+    <parameter name="source" byreference="false" type="{unknown}"/>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+    <parameter name="parents" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="find all relative imports in css" line="196"/>
+      <comment value="loop the matches" line="207"/>
+      <comment value="replace the import statements" line="237"/>
+    </inline>
+  </method>
+  <method name="importFiles" start="254" end="287" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Import files into the CSS, base64-ized."/>
+      <url value="(image.jpg) images will be loaded and their content merged into the">original file, to save HTTP requests.</url>
+      <param description="The file to import files for." type="string" variable="$source"/>
+      <param description="The CSS content to import files for." type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="source" byreference="false" type="{unknown}"/>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="execute" start="298" end="344" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Minify the data.">Perform CSS optimizations.</description>
+      <param description="Path to write the data to." type="object" variable="$path">
+        <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+      </param>
+      <param description="Parent paths, for circular reference checks." type="array" variable="$parents" of="object">
+        <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+      </param>
+      <return description="The minified data." type="string"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}" default="" constant="null"/>
+    <parameter name="parents" byreference="false" type="array" default=""/>
+    <inline>
+      <comment value="loop css data (raw data and files)" line="302"/>
+    </inline>
+  </method>
+  <method name="move" start="357" end="475" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Moving a css file should update all relative urls.">Relative references (e.g. ../images/image.gif) in a certain css file,
+will have to be updated when a file is being saved at another location
+(e.g. ../../images/image.gif, if the new CSS file is 1 folder deeper).</description>
+      <param description="Relative path converter" type="object" variable="$converter">
+        <type full="MatthiasMullie\PathConverter\Converter" namespace="MatthiasMullie\PathConverter" name="Converter"/>
+      </param>
+      <param description="The CSS content to update relative urls for." type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="converter" byreference="false" type="object">
+      <type full="MatthiasMullie\PathConverter\Converter" namespace="MatthiasMullie\PathConverter" name="Converter"/>
+    </parameter>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Relative path references will usually be enclosed by url(). @import" line="359"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="is an exception, where url() is not necessary around the path (but is" line="360"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="allowed)." line="361"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="This *could* be 1 regular expression, where both regular expressions" line="362"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="in this array are on different sides of a |. But we're using named" line="363"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="patterns in both regexes, the same name on both regexes. This is only" line="364"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="possible with a (?J) modifier, but that only works after a fairly" line="365"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="recent PCRE version. That's why I'm doing 2 separate regular" line="366"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="expressions &amp; combining the matches after executing of both." line="367"/>
+      <comment value="find all relative urls in css" line="436"/>
+      <comment value="loop all urls" line="447"/>
+      <comment value="replace urls" line="471"/>
+    </inline>
+  </method>
+  <method name="shortenHex" start="485" end="490" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Shorthand hex color codes.">#FF0000 -&gt; #F00.</description>
+      <param description="The CSS content to shorten the hex color codes for." type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="shortenZeroes" start="499" end="530" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Shorthand 0 values to plain 0, instead of e.g. -0em."/>
+      <param description="The CSS content to shorten the zero values for." type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="reusable bits of code throughout these regexes:" line="501"/>
+      <comment value="before &amp; after are used to make sure we don't match lose unintended" line="502"/>
+      <comment value="0-like values (e.g. in #000, or in http://url/1.0)" line="503"/>
+      <comment value="units can be stripped from 0 values, or used to recognize non 0" line="504"/>
+      <comment value="values (where wa may be able to strip a .0 suffix)" line="505"/>
+      <comment value="strip units after zeroes (0px -&gt; 0)" line="510"/>
+      <comment value="NOTE: it should be safe to remove all units for a 0 value, but in" line="511"/>
+      <comment value="practice, Webkit (especially Safari) seems to stumble over at least" line="512"/>
+      <comment value="0%, potentially other units as well. Only stripping 'px' for now." line="513"/>
+      <comment value="@see https://github.com/matthiasmullie/minify/issues/60" line="514"/>
+      <comment value="strip 0-digits (.0 -&gt; 0)" line="517"/>
+      <comment value="strip trailing 0: 50.10 -&gt; 50.1, 50.10px -&gt; 50.1px" line="519"/>
+      <comment value="strip trailing 0: 50.00 -&gt; 50, 50.00px -&gt; 50px" line="521"/>
+      <comment value="strip leading 0: 0.1 -&gt; .1, 01.1 -&gt; 1.1" line="523"/>
+      <comment value="strip negative zeroes (-0 -&gt; 0) &amp; truncate zeroes (00 -&gt; 0)" line="526"/>
+    </inline>
+  </method>
+  <method name="stripEmptyTags" start="539" end="542" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Strip comments from source code."/>
+      <param type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="stripComments" start="547" end="550" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Strip comments from source code."/>
+    </docblock>
+  </method>
+  <method name="stripWhitespace" start="559" end="584" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Strip whitespace."/>
+      <param description="The CSS content to strip the whitespace for." type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="remove leading &amp; trailing whitespace" line="561"/>
+      <comment value="replace newlines with a single space" line="565"/>
+      <comment value="remove whitespace around meta characters" line="568"/>
+      <comment value="inspired by stackoverflow.com/questions/15195750/minify-compress-css-with-regex" line="569"/>
+      <comment value="whitespace around + and - can only be stripped in selectors, like" line="575"/>
+      <comment value=":nth-child(3+2n), not in things like calc(3px + 2px) or shorthands" line="576"/>
+      <comment value="like 3px -2px" line="577"/>
+      <comment value="remove semicolon/whitespace followed by closing bracket" line="580"/>
+    </inline>
+  </method>
+  <method name="canImportBySize" start="593" end="596" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Check if file is small enough to be imported."/>
+      <param description="The path to the file." type="string" variable="$path"/>
+      <return type="object">
+        <type full="MatthiasMullie\Minify\bool" namespace="MatthiasMullie\Minify" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="MatthiasMullie\Minify\Minify" namespace="MatthiasMullie\Minify" name="Minify">
+    <member name="data" type="array" default="" visibility="protected" static="false" line="24">
+      <docblock>
+        <description compact="The data to be minified."/>
+        <var type="array" of="object">
+          <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+        </var>
+      </docblock>
+    </member>
+    <member name="patterns" type="array" default="" visibility="protected" static="false" line="31">
+      <docblock>
+        <description compact="Array of patterns to match."/>
+        <var type="array" of="object">
+          <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+        </var>
+      </docblock>
+    </member>
+    <member name="extracted" type="array" default="" visibility="public" static="false" line="40">
+      <docblock>
+        <description compact="This array will hold content of strings and regular expressions that have been extracted from the JS source code, so we can reliably match &quot;code&quot;, without having to worry about potential &quot;code-like&quot; characters inside."/>
+        <var type="array" of="object">
+          <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+        </var>
+      </docblock>
+    </member>
+    <constructor name="__construct" start="45" end="51" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Init the minify class - optionally, code may be passed along already."/>
+      </docblock>
+      <inline>
+        <comment value="it's possible to add the source through the constructor as well ;)" line="47"/>
+      </inline>
+    </constructor>
+    <method name="add" start="58" end="78" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Add a file or straight-up code to be minified."/>
+        <param type="string" variable="$data"/>
+      </docblock>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+      <inline>
+        <comment value="bogus &quot;usage&quot; of parameter $data: scrutinizer warns this variable is" line="60"/>
+        <comment value="not used (we're using func_get_args instead to support overloading)," line="61"/>
+        <comment value="but it still needs to be defined because it makes no sense to have" line="62"/>
+        <comment value="this function without argument :)" line="63"/>
+        <comment value="this method can be overloaded" line="66"/>
+      </inline>
+    </method>
+    <method name="minify" start="87" end="97" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Minify the data &amp; (optionally) saves it to a file."/>
+        <param description="Path to write the data to." type="object" variable="$path">
+          <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+        </param>
+        <return description="The minified data." type="string"/>
+      </docblock>
+      <parameter name="path" byreference="false" type="{unknown}" default="" constant="null"/>
+      <inline>
+        <comment value="save to path" line="91"/>
+      </inline>
+    </method>
+    <method name="gzip" start="107" end="118" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Minify &amp; gzip the data &amp; (optionally) saves it to a file."/>
+        <param description="Path to write the data to." type="object" variable="$path">
+          <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+        </param>
+        <param description="Compression level, from 0 to 9." type="object" variable="$level">
+          <type full="MatthiasMullie\Minify\int[optional]" namespace="MatthiasMullie\Minify" name="int[optional]"/>
+        </param>
+        <return description="The minified &amp; gzipped data." type="string"/>
+      </docblock>
+      <parameter name="path" byreference="false" type="{unknown}" default="" constant="null"/>
+      <parameter name="level" byreference="false" type="integer" default="9"/>
+      <inline>
+        <comment value="save to path" line="112"/>
+      </inline>
+    </method>
+    <method name="cache" start="127" end="133" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Minify the data &amp; write it to a CacheItemInterface object."/>
+        <param description="Cache item to write the data to." type="object" variable="$item">
+          <type full="Psr\Cache\CacheItemInterface" namespace="Psr\Cache" name="CacheItemInterface"/>
+        </param>
+        <return description="Cache item with the minifier data." type="object">
+          <type full="Psr\Cache\CacheItemInterface" namespace="Psr\Cache" name="CacheItemInterface"/>
+        </return>
+      </docblock>
+      <parameter name="item" byreference="false" type="object">
+        <type full="Psr\Cache\CacheItemInterface" namespace="Psr\Cache" name="CacheItemInterface"/>
+      </parameter>
+    </method>
+    <method name="execute" start="142" end="142" abstract="true" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Minify the data."/>
+        <param description="Path to write the data to." type="object" variable="$path">
+          <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+        </param>
+        <return description="The minified data." type="string"/>
+      </docblock>
+      <parameter name="path" byreference="false" type="{unknown}" default="" constant="null"/>
+    </method>
+    <method name="load" start="151" end="164" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Load data."/>
+        <param description="Either a path to a file or the content itself." type="string" variable="$data"/>
+        <return type="string"/>
+      </docblock>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+      <inline>
+        <comment value="check if the data is a file" line="153"/>
+      </inline>
+    </method>
+    <method name="save" start="174" end="181" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Save to file."/>
+        <param description="The minified data." type="string" variable="$content"/>
+        <param description="The path to save the minified data to." type="string" variable="$path"/>
+        <throws type="object">
+          <type full="MatthiasMullie\Minify\Exceptions\IOException" namespace="MatthiasMullie\Minify\Exceptions" name="IOException"/>
+        </throws>
+      </docblock>
+      <parameter name="content" byreference="false" type="{unknown}"/>
+      <parameter name="path" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="registerPattern" start="189" end="195" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Register a pattern to execute against the source content."/>
+        <param description="PCRE pattern." type="string" variable="$pattern"/>
+        <param description="Replacement value for matched pattern." type="object" variable="$replacement">
+          <type full="MatthiasMullie\Minify\string|callable" namespace="MatthiasMullie\Minify" name="string|callable"/>
+        </param>
+      </docblock>
+      <parameter name="pattern" byreference="false" type="{unknown}"/>
+      <parameter name="replacement" byreference="false" type="string" default="''"/>
+      <inline>
+        <comment value="study the pattern, we'll execute it more than once" line="191"/>
+      </inline>
+    </method>
+    <method name="replace" start="209" end="279" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="We can't &quot;just&quot; run some regular expressions against JavaScript: it's a complex language. E.g. having an occurrence of // xyz would be a comment, unless it's used within a string. Of you could have something that looks like a 'string', but inside a comment.">The only way to accurately replace these pieces is to traverse the JS one
+character at a time and try to find whatever starts first.</description>
+        <param description="The content to replace patterns in." type="string" variable="$content"/>
+        <return description="The (manipulated) content." type="string"/>
+      </docblock>
+      <parameter name="content" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="replacePattern" start="293" end="300" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="This is where a pattern is matched against $content and the matches are replaced by their respective value.">This function will be called plenty of times, where $content will always
+move up 1 character.</description>
+        <param description="Pattern to match." type="string" variable="$pattern"/>
+        <param description="Replacement value." type="object" variable="$replacement">
+          <type full="MatthiasMullie\Minify\string|callable" namespace="MatthiasMullie\Minify" name="string|callable"/>
+        </param>
+        <param description="Content to match pattern against." type="string" variable="$content"/>
+        <return type="string"/>
+      </docblock>
+      <parameter name="pattern" byreference="false" type="{unknown}"/>
+      <parameter name="replacement" byreference="false" type="{unknown}"/>
+      <parameter name="content" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="extractStrings" start="315" end="351" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Strings are a pattern we need to match, in order to ignore potential code-like content inside them, but we just want all of the string content to remain untouched.">This method will replace all string content with simple STRING#
+placeholder text, so we've rid all strings from characters that may be
+misinterpreted. Original string content will be saved in $this-&gt;extracted
+and after doing all other minifying, we can restore the original content
+via restoreStrings().</description>
+        <param type="object" variable="$chars">
+          <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+        </param>
+      </docblock>
+      <parameter name="chars" byreference="false" type="string" default="'\'&quot;'"/>
+      <inline>
+        <comment value="PHP only supports $this inside anonymous functions since 5.4" line="317"/>
+        <comment value="The \\ messiness explained:" line="338"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="* Don't count ' or &quot; as end-of-string if it's escaped (has backslash" line="339"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="in front of it)" line="340"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="* Unless... that backslash itself is escaped (another leading slash)," line="341"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="in which case it's no longer escaping the ' or &quot;" line="342"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="* So there can be either no backslash, or an even number" line="343"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="* multiply all of that times 4, to account for the escaping that has" line="344"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="to be done to pass the backslash into the PHP string without it being" line="345"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="considered as escape-char (times 2) and to get it in the regex," line="346"/>
+        <comment xmlns="http://xml.phpdox.net/src" value="escaped (times 2)" line="347"/>
+      </inline>
+    </method>
+    <method name="restoreExtractedData" start="362" end="374" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="This method will restore all extracted data (strings, regexes) that were replaced with placeholder text in extract*(). The original content was saved in $this-&gt;extracted."/>
+        <param type="string" variable="$content"/>
+        <return type="string"/>
+      </docblock>
+      <parameter name="content" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="canImportFile" start="383" end="386" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Check if the path is a regular file and can be read."/>
+        <param type="string" variable="$path"/>
+        <return type="object">
+          <type full="MatthiasMullie\Minify\bool" namespace="MatthiasMullie\Minify" name="bool"/>
+        </return>
+      </docblock>
+      <parameter name="path" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="openFileForWriting" start="397" end="404" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Attempts to open file specified by $path for writing."/>
+        <param description="The path to the file." type="string" variable="$path"/>
+        <return description="Specifier for the target file." type="resource"/>
+        <throws type="object">
+          <type full="MatthiasMullie\Minify\Exceptions\IOException" namespace="MatthiasMullie\Minify\Exceptions" name="IOException"/>
+        </throws>
+      </docblock>
+      <parameter name="path" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="writeToFile" start="415" end="420" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Attempts to write $content to the file specified by $handler. $path is used for printing exceptions."/>
+        <param description="The resource to write to." type="resource" variable="$handler"/>
+        <param description="The content to write." type="string" variable="$content"/>
+        <param description="The path to the file (for exception printing only)." type="string" variable="$path"/>
+        <throws type="object">
+          <type full="MatthiasMullie\Minify\Exceptions\IOException" namespace="MatthiasMullie\Minify\Exceptions" name="IOException"/>
+        </throws>
+      </docblock>
+      <parameter name="handler" byreference="false" type="{unknown}"/>
+      <parameter name="content" byreference="false" type="{unknown}"/>
+      <parameter name="path" byreference="false" type="string" default="''"/>
+    </method>
+  </parent>
+</class>

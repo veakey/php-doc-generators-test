@@ -1,0 +1,124 @@
+\hypertarget{classCSSTest}{}\section{C\+S\+S\+Test Class Reference}
+\label{classCSSTest}\index{C\+S\+S\+Test@{C\+S\+S\+Test}}
+Inheritance diagram for C\+S\+S\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCSSTest}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCSSTest_af29b8a6322bc4355b62e088e11c447b3}{minify} (\$input, \$expected)
+\item 
+\hyperlink{classCSSTest_af8607abbbdd98d9578e21f0c3cb02dfa}{convert\+Relative\+Path} (\$source, \$target, \$expected)
+\item 
+\hyperlink{classCSSTest_af7301b8dc02c324aacf67c94fc190a53}{file\+Import\+Loop} ()
+\item 
+\hyperlink{classCSSTest_a1bcfbc83fe3c2a85e1fc27f610e65f1c}{set\+Config} ()
+\item 
+\hyperlink{classCSSTest_a6208f2e16f872fe29edf96a4a39b1e08}{data\+Provider} ()
+\item 
+\hyperlink{classCSSTest_aed56e79de04858ce22b09cd347489498}{data\+Provider\+Paths} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCSSTest_a2e2b5ecbcca146f5fe5d34c8de1521df}{set\+Up} ()
+\item 
+\hyperlink{classCSSTest_af3b94f1fd59b66c798148a330e662e6e}{tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+SS minifier test case. 
+
+\subsection{Member Function Documentation}
+\index{C\+S\+S\+Test@{C\+S\+S\+Test}!convert\+Relative\+Path@{convert\+Relative\+Path}}
+\index{convert\+Relative\+Path@{convert\+Relative\+Path}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{convert\+Relative\+Path(\$source, \$target, \$expected)}{convertRelativePath($source, $target, $expected)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::convert\+Relative\+Path (
+\begin{DoxyParamCaption}
+\item[{}]{\$source, }
+\item[{}]{\$target, }
+\item[{}]{\$expected}
+\end{DoxyParamCaption}
+)}\hypertarget{classCSSTest_af8607abbbdd98d9578e21f0c3cb02dfa}{}\label{classCSSTest_af8607abbbdd98d9578e21f0c3cb02dfa}
+Test conversion of relative paths, provided by data\+Provider\+Paths.
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000002}{Test}]data\+Provider\+Paths \end{DoxyRefDesc}
+\index{C\+S\+S\+Test@{C\+S\+S\+Test}!data\+Provider@{data\+Provider}}
+\index{data\+Provider@{data\+Provider}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{data\+Provider()}{dataProvider()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::data\+Provider (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCSSTest_a6208f2e16f872fe29edf96a4a39b1e08}{}\label{classCSSTest_a6208f2e16f872fe29edf96a4a39b1e08}
+\begin{DoxyReturn}{Returns}
+array \mbox{[}input, expected result\mbox{]} 
+\end{DoxyReturn}
+\index{C\+S\+S\+Test@{C\+S\+S\+Test}!data\+Provider\+Paths@{data\+Provider\+Paths}}
+\index{data\+Provider\+Paths@{data\+Provider\+Paths}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{data\+Provider\+Paths()}{dataProviderPaths()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::data\+Provider\+Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCSSTest_aed56e79de04858ce22b09cd347489498}{}\label{classCSSTest_aed56e79de04858ce22b09cd347489498}
+\begin{DoxyReturn}{Returns}
+array \mbox{[}input, expected result\mbox{]} 
+\end{DoxyReturn}
+\index{C\+S\+S\+Test@{C\+S\+S\+Test}!file\+Import\+Loop@{file\+Import\+Loop}}
+\index{file\+Import\+Loop@{file\+Import\+Loop}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{file\+Import\+Loop()}{fileImportLoop()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::file\+Import\+Loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCSSTest_af7301b8dc02c324aacf67c94fc190a53}{}\label{classCSSTest_af7301b8dc02c324aacf67c94fc190a53}
+Test loop while importing file.
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000003}{Test}]\end{DoxyRefDesc}
+
+
+Matthias\+Mullie \index{C\+S\+S\+Test@{C\+S\+S\+Test}!minify@{minify}}
+\index{minify@{minify}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{minify(\$input, \$expected)}{minify($input, $expected)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::minify (
+\begin{DoxyParamCaption}
+\item[{}]{\$input, }
+\item[{}]{\$expected}
+\end{DoxyParamCaption}
+)}\hypertarget{classCSSTest_af29b8a6322bc4355b62e088e11c447b3}{}\label{classCSSTest_af29b8a6322bc4355b62e088e11c447b3}
+Test C\+SS minifier rules, provided by data\+Provider.
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000001}{Test}]data\+Provider \end{DoxyRefDesc}
+\index{C\+S\+S\+Test@{C\+S\+S\+Test}!set\+Config@{set\+Config}}
+\index{set\+Config@{set\+Config}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{set\+Config()}{setConfig()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::set\+Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCSSTest_a1bcfbc83fe3c2a85e1fc27f610e65f1c}{}\label{classCSSTest_a1bcfbc83fe3c2a85e1fc27f610e65f1c}
+Test minifier import configuration methods.
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000004}{Test}]\end{DoxyRefDesc}
+\index{C\+S\+S\+Test@{C\+S\+S\+Test}!set\+Up@{set\+Up}}
+\index{set\+Up@{set\+Up}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{set\+Up()}{setUp()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classCSSTest_a2e2b5ecbcca146f5fe5d34c8de1521df}{}\label{classCSSTest_a2e2b5ecbcca146f5fe5d34c8de1521df}
+Prepares the environment before running a test. \index{C\+S\+S\+Test@{C\+S\+S\+Test}!tear\+Down@{tear\+Down}}
+\index{tear\+Down@{tear\+Down}!C\+S\+S\+Test@{C\+S\+S\+Test}}
+\subsubsection[{\texorpdfstring{tear\+Down()}{tearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}C\+S\+S\+Test\+::tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classCSSTest_af3b94f1fd59b66c798148a330e662e6e}{}\label{classCSSTest_af3b94f1fd59b66c798148a330e662e6e}
+Cleans up the environment after running a test. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+minify/tests/css/C\+S\+S\+Test.\+php\end{DoxyCompactItemize}

@@ -1,0 +1,370 @@
+\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify}{}\section{Matthias\+Mullie\textbackslash{}Minify\textbackslash{}Minify Class Reference}
+\label{classMatthiasMullie_1_1Minify_1_1Minify}\index{Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify@{Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify}}
+Inheritance diagram for Matthias\+Mullie\textbackslash{}Minify\textbackslash{}Minify\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMatthiasMullie_1_1Minify_1_1Minify}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_ae5ea3b458c35497dc4ff966cee267437}{\+\_\+\+\_\+construct} ()
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a33743c6d8907da38b20d48df3fe89bc2}{add} (\$data)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_aaf66e57619d917438dc576e50adbc0a0}{minify} (\$path=null)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a2dfa9a1f5f4dd2a3db440c921d846f9f}{gzip} (\$path=null, \$level=9)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a2dc0d25b11384ca1678e7ac303fc8e2c}{cache} (Cache\+Item\+Interface \$item)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a78089618b3f87b80fc98dc00bed21de9}{execute} (\$path=null)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$extracted} = array()\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a908a08db992158e800aa31a304ce78e8}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a908a08db992158e800aa31a304ce78e8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a72c3c3b0c5f40159f0562464d2321622}{load} (\$data)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a609a7abd9a268cdf47dacbe9169cdb09}{save} (\$content, \$path)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a7fe4a2f61edb6d0041f30a297f823941}{register\+Pattern} (\$pattern, \$replacement= \textquotesingle{}\textquotesingle{})
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a67a9afda5da913eaa78537d6663db7b1}{replace} (\$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a388b7862eeefb29467bd6797e4ec6ce4}{replace\+Pattern} (\$pattern, \$replacement, \$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_af94273912df2d57d13bd0387d390d365}{extract\+Strings} (\$chars= \textquotesingle{}\textbackslash{}\textquotesingle{}\char`\"{}\textquotesingle{}) 
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a2dcd7d9daae771849ee27cbba64e31e6}{restore\+Extracted\+Data} (\$content)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_a2a8fd2f70bdeda26cb7e3f8ed1f81839}{can\+Import\+File} (\$path)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_ac0176ecf1352c0cb48414d1dbfc01e42}{open\+File\+For\+Writing} (\$path)
+\item 
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify_aab7196423de2e10863d47e7cbb0072f7}{write\+To\+File} (\$handler, \$content, \$path= \textquotesingle{}\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \$data} = array()\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_aa85677753f01e1bba24962d94ce28320}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_aa85677753f01e1bba24962d94ce28320}
+
+\item 
+{\bfseries \$patterns} = array()\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a5f6929c0fc987a30afcd8fd8fe4cb9c6}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a5f6929c0fc987a30afcd8fd8fe4cb9c6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract minifier class.
+
+Please report bugs on \href{https://github.com/matthiasmullie/minify/issues}{\tt https\+://github.\+com/matthiasmullie/minify/issues}
+
+\begin{DoxyAuthor}{Author}
+Matthias Mullie \href{mailto:minify@mullie.eu}{\tt minify@mullie.\+eu} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2012, Matthias Mullie. All rights reserved.  M\+IT License 
+\end{DoxyCopyright}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}}
+\index{\+\_\+\+\_\+construct@{\+\_\+\+\_\+construct}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+construct()}{__construct()}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::\+\_\+\+\_\+construct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_ae5ea3b458c35497dc4ff966cee267437}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_ae5ea3b458c35497dc4ff966cee267437}
+Init the minify class -\/ optionally, code may be passed along already. 
+
+\subsection{Member Function Documentation}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!add@{add}}
+\index{add@{add}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{add(\$data)}{add($data)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::add (
+\begin{DoxyParamCaption}
+\item[{}]{\$data}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a33743c6d8907da38b20d48df3fe89bc2}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a33743c6d8907da38b20d48df3fe89bc2}
+Add a file or straight-\/up code to be minified.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!cache@{cache}}
+\index{cache@{cache}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{cache(\+Cache\+Item\+Interface \$item)}{cache(CacheItemInterface $item)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::cache (
+\begin{DoxyParamCaption}
+\item[{Cache\+Item\+Interface}]{\$item}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a2dc0d25b11384ca1678e7ac303fc8e2c}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a2dc0d25b11384ca1678e7ac303fc8e2c}
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify}{Minify} the data \& write it to a Cache\+Item\+Interface object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+Cache\+Item\+Interface & {\em \$item} & Cache item to write the data to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cache\+Item\+Interface Cache item with the minifier data. 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!can\+Import\+File@{can\+Import\+File}}
+\index{can\+Import\+File@{can\+Import\+File}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{can\+Import\+File(\$path)}{canImportFile($path)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::can\+Import\+File (
+\begin{DoxyParamCaption}
+\item[{}]{\$path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a2a8fd2f70bdeda26cb7e3f8ed1f81839}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a2a8fd2f70bdeda26cb7e3f8ed1f81839}
+Check if the path is a regular file and can be read.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!execute@{execute}}
+\index{execute@{execute}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{execute(\$path=null)}{execute($path=null)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::execute (
+\begin{DoxyParamCaption}
+\item[{}]{\$path = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [abstract]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a78089618b3f87b80fc98dc00bed21de9}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a78089618b3f87b80fc98dc00bed21de9}
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify}{Minify} the data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\mbox{[}optional\mbox{]}} & \$path Path to write the data to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The minified data. 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!extract\+Strings@{extract\+Strings}}
+\index{extract\+Strings@{extract\+Strings}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{extract\+Strings(\$chars= \textquotesingle{}\textbackslash{}\textquotesingle{}""\textquotesingle{}) }{extractStrings($chars= '\textbackslash{}'"') }}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::extract\+Strings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_af94273912df2d57d13bd0387d390d365}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_af94273912df2d57d13bd0387d390d365}
+Strings are a pattern we need to match, in order to ignore potential code-\/like content inside them, but we just want all of the string content to remain untouched.
+
+This method will replace all string content with simple S\+T\+R\+I\+NG\# placeholder text, so we\textquotesingle{}ve rid all strings from characters that may be misinterpreted. Original string content will be saved in \$this-\/$>$extracted and after doing all other minifying, we can restore the original content via restore\+Strings().
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\mbox{[}optional\mbox{]}} & \$chars \\
+\hline
+\end{DoxyParams}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!gzip@{gzip}}
+\index{gzip@{gzip}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{gzip(\$path=null, \$level=9)}{gzip($path=null, $level=9)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::gzip (
+\begin{DoxyParamCaption}
+\item[{}]{\$path = {\ttfamily null}, }
+\item[{}]{\$level = {\ttfamily 9}}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a2dfa9a1f5f4dd2a3db440c921d846f9f}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a2dfa9a1f5f4dd2a3db440c921d846f9f}
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify}{Minify} \& gzip the data \& (optionally) saves it to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\mbox{[}optional\mbox{]}} & \$path Path to write the data to. \\
+\hline
+{\em int\mbox{[}optional\mbox{]}} & \$level Compression level, from 0 to 9.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The minified \& gzipped data. 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!load@{load}}
+\index{load@{load}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{load(\$data)}{load($data)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::load (
+\begin{DoxyParamCaption}
+\item[{}]{\$data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a72c3c3b0c5f40159f0562464d2321622}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a72c3c3b0c5f40159f0562464d2321622}
+Load data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & Either a path to a file or the content itself.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!minify@{minify}}
+\index{minify@{minify}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{minify(\$path=null)}{minify($path=null)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::minify (
+\begin{DoxyParamCaption}
+\item[{}]{\$path = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_aaf66e57619d917438dc576e50adbc0a0}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_aaf66e57619d917438dc576e50adbc0a0}
+\hyperlink{classMatthiasMullie_1_1Minify_1_1Minify}{Minify} the data \& (optionally) saves it to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\mbox{[}optional\mbox{]}} & \$path Path to write the data to.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The minified data. 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!open\+File\+For\+Writing@{open\+File\+For\+Writing}}
+\index{open\+File\+For\+Writing@{open\+File\+For\+Writing}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{open\+File\+For\+Writing(\$path)}{openFileForWriting($path)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::open\+File\+For\+Writing (
+\begin{DoxyParamCaption}
+\item[{}]{\$path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_ac0176ecf1352c0cb48414d1dbfc01e42}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_ac0176ecf1352c0cb48414d1dbfc01e42}
+Attempts to open file specified by \$path for writing.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$path} & The path to the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resource Specifier for the target file.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!register\+Pattern@{register\+Pattern}}
+\index{register\+Pattern@{register\+Pattern}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{register\+Pattern(\$pattern, \$replacement= \textquotesingle{}\textquotesingle{})}{registerPattern($pattern, $replacement= '')}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::register\+Pattern (
+\begin{DoxyParamCaption}
+\item[{}]{\$pattern, }
+\item[{}]{\$replacement = {\ttfamily \textquotesingle{}\textquotesingle{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a7fe4a2f61edb6d0041f30a297f823941}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a7fe4a2f61edb6d0041f30a297f823941}
+Register a pattern to execute against the source content.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$pattern} & P\+C\+RE pattern. \\
+\hline
+string | callable & {\em \$replacement} & Replacement value for matched pattern. \\
+\hline
+\end{DoxyParams}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!replace@{replace}}
+\index{replace@{replace}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{replace(\$content)}{replace($content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::replace (
+\begin{DoxyParamCaption}
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a67a9afda5da913eaa78537d6663db7b1}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a67a9afda5da913eaa78537d6663db7b1}
+We can\textquotesingle{}t \char`\"{}just\char`\"{} run some regular expressions against Java\+Script\+: it\textquotesingle{}s a complex language. E.\+g. having an occurrence of // xyz would be a comment, unless it\textquotesingle{}s used within a string. Of you could have something that looks like a \textquotesingle{}string\textquotesingle{}, but inside a comment. The only way to accurately replace these pieces is to traverse the \hyperlink{classMatthiasMullie_1_1Minify_1_1JS}{JS} one character at a time and try to find whatever starts first.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & The content to replace patterns in.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string The (manipulated) content. 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!replace\+Pattern@{replace\+Pattern}}
+\index{replace\+Pattern@{replace\+Pattern}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{replace\+Pattern(\$pattern, \$replacement, \$content)}{replacePattern($pattern, $replacement, $content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::replace\+Pattern (
+\begin{DoxyParamCaption}
+\item[{}]{\$pattern, }
+\item[{}]{\$replacement, }
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a388b7862eeefb29467bd6797e4ec6ce4}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a388b7862eeefb29467bd6797e4ec6ce4}
+This is where a pattern is matched against \$content and the matches are replaced by their respective value. This function will be called plenty of times, where \$content will always move up 1 character.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$pattern} & Pattern to match. \\
+\hline
+string | callable & {\em \$replacement} & Replacement value. \\
+\hline
+string & {\em \$content} & Content to match pattern against.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!restore\+Extracted\+Data@{restore\+Extracted\+Data}}
+\index{restore\+Extracted\+Data@{restore\+Extracted\+Data}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{restore\+Extracted\+Data(\$content)}{restoreExtractedData($content)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::restore\+Extracted\+Data (
+\begin{DoxyParamCaption}
+\item[{}]{\$content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a2dcd7d9daae771849ee27cbba64e31e6}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a2dcd7d9daae771849ee27cbba64e31e6}
+This method will restore all extracted data (strings, regexes) that were replaced with placeholder text in extract$\ast$(). The original content was saved in \$this-\/$>$extracted.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!save@{save}}
+\index{save@{save}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{save(\$content, \$path)}{save($content, $path)}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::save (
+\begin{DoxyParamCaption}
+\item[{}]{\$content, }
+\item[{}]{\$path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_a609a7abd9a268cdf47dacbe9169cdb09}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_a609a7abd9a268cdf47dacbe9169cdb09}
+Save to file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$content} & The minified data. \\
+\hline
+string & {\em \$path} & The path to save the minified data to.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\index{Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}!write\+To\+File@{write\+To\+File}}
+\index{write\+To\+File@{write\+To\+File}!Matthias\+Mullie\+::\+Minify\+::\+Minify@{Matthias\+Mullie\+::\+Minify\+::\+Minify}}
+\subsubsection[{\texorpdfstring{write\+To\+File(\$handler, \$content, \$path= \textquotesingle{}\textquotesingle{})}{writeToFile($handler, $content, $path= '')}}]{\setlength{\rightskip}{0pt plus 5cm}Matthias\+Mullie\textbackslash{}\+Minify\textbackslash{}\+Minify\+::write\+To\+File (
+\begin{DoxyParamCaption}
+\item[{}]{\$handler, }
+\item[{}]{\$content, }
+\item[{}]{\$path = {\ttfamily \textquotesingle{}\textquotesingle{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatthiasMullie_1_1Minify_1_1Minify_aab7196423de2e10863d47e7cbb0072f7}{}\label{classMatthiasMullie_1_1Minify_1_1Minify_aab7196423de2e10863d47e7cbb0072f7}
+Attempts to write \$content to the file specified by \$handler. \$path is used for printing exceptions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+resource & {\em \$handler} & The resource to write to. \\
+\hline
+string & {\em \$content} & The content to write. \\
+\hline
+string & {\em \$path} & The path to the file (for exception printing only).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em I\+O\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+minify/src/Minify.\+php\end{DoxyCompactItemize}

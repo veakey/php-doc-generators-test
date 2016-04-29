@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/home/dara/Documents/work/unigestion/php-doc-generator/minify">
+    <dir name="src">
+      <file name="Exception.php" size="199" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="14f46ba089cdee2a373fe86979e31e7f695eb7b3" xml="tokens/src/Exception.php.xml"/>
+      <file name="Minify.php" size="13917" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="449a5c8a39ec836cc7ac0f8ec4fe11b0ca3661f8" xml="tokens/src/Minify.php.xml"/>
+      <file name="JS.php" size="33805" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="29c615d3c746af6009ea6eda9e6648bcfff3b4dc" xml="tokens/src/JS.php.xml"/>
+      <dir name="Exceptions">
+        <file name="IOException.php" size="151" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="da4b5b0bef781cd7b865e34f1cc8ce022f229685" xml="tokens/src/Exceptions/IOException.php.xml"/>
+        <file name="BasicException.php" size="196" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="55c5f6a2c579cb4f7cf6dabac04fcccecbeef85f" xml="tokens/src/Exceptions/BasicException.php.xml"/>
+        <file name="FileImportException.php" size="159" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="2e7dcf99dd92b7a10611625a2a45221514fbfa5b" xml="tokens/src/Exceptions/FileImportException.php.xml"/>
+      </dir>
+      <file name="CSS.php" size="19189" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="31fcaf95f0f45814f307c1dd86263041f06dda3c" xml="tokens/src/CSS.php.xml"/>
+    </dir>
+    <dir name="tests">
+      <dir name="css">
+        <file name="CSSTest.php" size="22206" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="3220e6aa7aeac1c0bcb8ae199437d007da1a912e" xml="tokens/tests/css/CSSTest.php.xml"/>
+      </dir>
+      <dir name="js">
+        <file name="AbstractTest.php" size="4818" time="2016-04-29T04:18:42+00:00" unixtime="1461903522" sha1="91b2fb3fe3fb07cc04b1ec90511447f21692a934" xml="tokens/tests/js/AbstractTest.php.xml"/>
+        <file name="JSTest.php" size="21264" time="2016-04-29T04:18:42+00:00" unixtime="1461903522" sha1="88473ccbe2dbda0f6147661afb64016b732ed176" xml="tokens/tests/js/JSTest.php.xml"/>
+      </dir>
+      <file name="bootstrap.php" size="50" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="eea6d3f503f3de644563f90f8aa6f86e20e7860d" xml="tokens/tests/bootstrap.php.xml"/>
+    </dir>
+  </dir>
+</source>

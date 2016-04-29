@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="MatthiasMullie\Minify\Minify" namespace="MatthiasMullie\Minify" name="Minify" abstract="true" final="false" start="17" end="421">
+  <file path="/home/dara/Documents/work/unigestion/php-doc-generator/minify/src" file="Minify.php" realpath="/home/dara/Documents/work/unigestion/php-doc-generator/minify/src/Minify.php" size="13917" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="449a5c8a39ec836cc7ac0f8ec4fe11b0ca3661f8" relative="src/Minify.php"/>
+  <docblock>
+    <description compact="Abstract minifier class.">Please report bugs on https://github.com/matthiasmullie/minify/issues</description>
+    <author value="Matthias Mullie &lt;minify@mullie.eu&gt;"/>
+    <copyright value="Copyright (c) 2012, Matthias Mullie. All rights reserved."/>
+    <license name="MIT License"/>
+  </docblock>
+  <member name="data" type="array" default="" visibility="protected" static="false" line="24">
+    <docblock>
+      <description compact="The data to be minified."/>
+      <var type="array" of="object">
+        <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="patterns" type="array" default="" visibility="protected" static="false" line="31">
+    <docblock>
+      <description compact="Array of patterns to match."/>
+      <var type="array" of="object">
+        <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+      </var>
+    </docblock>
+  </member>
+  <member name="extracted" type="array" default="" visibility="public" static="false" line="40">
+    <docblock>
+      <description compact="This array will hold content of strings and regular expressions that have been extracted from the JS source code, so we can reliably match &quot;code&quot;, without having to worry about potential &quot;code-like&quot; characters inside."/>
+      <var type="array" of="object">
+        <type full="MatthiasMullie\Minify\string" namespace="MatthiasMullie\Minify" name="string"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="45" end="51" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Init the minify class - optionally, code may be passed along already."/>
+    </docblock>
+    <inline>
+      <comment value="it's possible to add the source through the constructor as well ;)" line="47"/>
+    </inline>
+  </constructor>
+  <method name="add" start="58" end="78" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Add a file or straight-up code to be minified."/>
+      <param type="string" variable="$data"/>
+    </docblock>
+    <parameter name="data" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="bogus &quot;usage&quot; of parameter $data: scrutinizer warns this variable is" line="60"/>
+      <comment value="not used (we're using func_get_args instead to support overloading)," line="61"/>
+      <comment value="but it still needs to be defined because it makes no sense to have" line="62"/>
+      <comment value="this function without argument :)" line="63"/>
+      <comment value="this method can be overloaded" line="66"/>
+    </inline>
+  </method>
+  <method name="minify" start="87" end="97" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Minify the data &amp; (optionally) saves it to a file."/>
+      <param description="Path to write the data to." type="object" variable="$path">
+        <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+      </param>
+      <return description="The minified data." type="string"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}" default="" constant="null"/>
+    <inline>
+      <comment value="save to path" line="91"/>
+    </inline>
+  </method>
+  <method name="gzip" start="107" end="118" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Minify &amp; gzip the data &amp; (optionally) saves it to a file."/>
+      <param description="Path to write the data to." type="object" variable="$path">
+        <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+      </param>
+      <param description="Compression level, from 0 to 9." type="object" variable="$level">
+        <type full="MatthiasMullie\Minify\int[optional]" namespace="MatthiasMullie\Minify" name="int[optional]"/>
+      </param>
+      <return description="The minified &amp; gzipped data." type="string"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}" default="" constant="null"/>
+    <parameter name="level" byreference="false" type="integer" default="9"/>
+    <inline>
+      <comment value="save to path" line="112"/>
+    </inline>
+  </method>
+  <method name="cache" start="127" end="133" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Minify the data &amp; write it to a CacheItemInterface object."/>
+      <param description="Cache item to write the data to." type="object" variable="$item">
+        <type full="Psr\Cache\CacheItemInterface" namespace="Psr\Cache" name="CacheItemInterface"/>
+      </param>
+      <return description="Cache item with the minifier data." type="object">
+        <type full="Psr\Cache\CacheItemInterface" namespace="Psr\Cache" name="CacheItemInterface"/>
+      </return>
+    </docblock>
+    <parameter name="item" byreference="false" type="object">
+      <type full="Psr\Cache\CacheItemInterface" namespace="Psr\Cache" name="CacheItemInterface"/>
+    </parameter>
+  </method>
+  <method name="execute" start="142" end="142" abstract="true" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Minify the data."/>
+      <param description="Path to write the data to." type="object" variable="$path">
+        <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+      </param>
+      <return description="The minified data." type="string"/>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}" default="" constant="null"/>
+  </method>
+  <method name="load" start="151" end="164" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Load data."/>
+      <param description="Either a path to a file or the content itself." type="string" variable="$data"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="data" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="check if the data is a file" line="153"/>
+    </inline>
+  </method>
+  <method name="save" start="174" end="181" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Save to file."/>
+      <param description="The minified data." type="string" variable="$content"/>
+      <param description="The path to save the minified data to." type="string" variable="$path"/>
+      <throws type="object">
+        <type full="MatthiasMullie\Minify\Exceptions\IOException" namespace="MatthiasMullie\Minify\Exceptions" name="IOException"/>
+      </throws>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="registerPattern" start="189" end="195" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Register a pattern to execute against the source content."/>
+      <param description="PCRE pattern." type="string" variable="$pattern"/>
+      <param description="Replacement value for matched pattern." type="object" variable="$replacement">
+        <type full="MatthiasMullie\Minify\string|callable" namespace="MatthiasMullie\Minify" name="string|callable"/>
+      </param>
+    </docblock>
+    <parameter name="pattern" byreference="false" type="{unknown}"/>
+    <parameter name="replacement" byreference="false" type="string" default="''"/>
+    <inline>
+      <comment value="study the pattern, we'll execute it more than once" line="191"/>
+    </inline>
+  </method>
+  <method name="replace" start="209" end="279" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="We can't &quot;just&quot; run some regular expressions against JavaScript: it's a complex language. E.g. having an occurrence of // xyz would be a comment, unless it's used within a string. Of you could have something that looks like a 'string', but inside a comment.">The only way to accurately replace these pieces is to traverse the JS one
+character at a time and try to find whatever starts first.</description>
+      <param description="The content to replace patterns in." type="string" variable="$content"/>
+      <return description="The (manipulated) content." type="string"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="replacePattern" start="293" end="300" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="This is where a pattern is matched against $content and the matches are replaced by their respective value.">This function will be called plenty of times, where $content will always
+move up 1 character.</description>
+      <param description="Pattern to match." type="string" variable="$pattern"/>
+      <param description="Replacement value." type="object" variable="$replacement">
+        <type full="MatthiasMullie\Minify\string|callable" namespace="MatthiasMullie\Minify" name="string|callable"/>
+      </param>
+      <param description="Content to match pattern against." type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="pattern" byreference="false" type="{unknown}"/>
+    <parameter name="replacement" byreference="false" type="{unknown}"/>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="extractStrings" start="315" end="351" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Strings are a pattern we need to match, in order to ignore potential code-like content inside them, but we just want all of the string content to remain untouched.">This method will replace all string content with simple STRING#
+placeholder text, so we've rid all strings from characters that may be
+misinterpreted. Original string content will be saved in $this-&gt;extracted
+and after doing all other minifying, we can restore the original content
+via restoreStrings().</description>
+      <param type="object" variable="$chars">
+        <type full="MatthiasMullie\Minify\string[optional]" namespace="MatthiasMullie\Minify" name="string[optional]"/>
+      </param>
+    </docblock>
+    <parameter name="chars" byreference="false" type="string" default="'\'&quot;'"/>
+    <inline>
+      <comment value="PHP only supports $this inside anonymous functions since 5.4" line="317"/>
+      <comment value="The \\ messiness explained:" line="338"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="* Don't count ' or &quot; as end-of-string if it's escaped (has backslash" line="339"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="in front of it)" line="340"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="* Unless... that backslash itself is escaped (another leading slash)," line="341"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="in which case it's no longer escaping the ' or &quot;" line="342"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="* So there can be either no backslash, or an even number" line="343"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="* multiply all of that times 4, to account for the escaping that has" line="344"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="to be done to pass the backslash into the PHP string without it being" line="345"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="considered as escape-char (times 2) and to get it in the regex," line="346"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="escaped (times 2)" line="347"/>
+    </inline>
+  </method>
+  <method name="restoreExtractedData" start="362" end="374" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="This method will restore all extracted data (strings, regexes) that were replaced with placeholder text in extract*(). The original content was saved in $this-&gt;extracted."/>
+      <param type="string" variable="$content"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="canImportFile" start="383" end="386" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Check if the path is a regular file and can be read."/>
+      <param type="string" variable="$path"/>
+      <return type="object">
+        <type full="MatthiasMullie\Minify\bool" namespace="MatthiasMullie\Minify" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="openFileForWriting" start="397" end="404" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Attempts to open file specified by $path for writing."/>
+      <param description="The path to the file." type="string" variable="$path"/>
+      <return description="Specifier for the target file." type="resource"/>
+      <throws type="object">
+        <type full="MatthiasMullie\Minify\Exceptions\IOException" namespace="MatthiasMullie\Minify\Exceptions" name="IOException"/>
+      </throws>
+    </docblock>
+    <parameter name="path" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="writeToFile" start="415" end="420" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Attempts to write $content to the file specified by $handler. $path is used for printing exceptions."/>
+      <param description="The resource to write to." type="resource" variable="$handler"/>
+      <param description="The content to write." type="string" variable="$content"/>
+      <param description="The path to the file (for exception printing only)." type="string" variable="$path"/>
+      <throws type="object">
+        <type full="MatthiasMullie\Minify\Exceptions\IOException" namespace="MatthiasMullie\Minify\Exceptions" name="IOException"/>
+      </throws>
+    </docblock>
+    <parameter name="handler" byreference="false" type="{unknown}"/>
+    <parameter name="content" byreference="false" type="{unknown}"/>
+    <parameter name="path" byreference="false" type="string" default="''"/>
+  </method>
+  <extenders>
+    <extender full="MatthiasMullie\Minify\JS" namespace="MatthiasMullie\Minify" name="JS"/>
+    <extender full="MatthiasMullie\Minify\CSS" namespace="MatthiasMullie\Minify" name="CSS"/>
+  </extenders>
+</class>

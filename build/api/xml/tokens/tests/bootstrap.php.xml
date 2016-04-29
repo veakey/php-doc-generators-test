@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests" file="bootstrap.php" realpath="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests/bootstrap.php" size="50" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="eea6d3f503f3de644563f90f8aa6f86e20e7860d" relative="tests/bootstrap.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_REQUIRE">require</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DIR">__DIR__</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'/../vendor/autoload.php'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4"/>
+</source>

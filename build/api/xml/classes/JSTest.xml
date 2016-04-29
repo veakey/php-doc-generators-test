@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="JSTest" namespace="" name="JSTest" abstract="false" final="false" start="8" end="716">
+  <file path="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests/js" file="JSTest.php" realpath="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests/js/JSTest.php" size="21264" time="2016-04-29T04:18:42+00:00" unixtime="1461903522" sha1="88473ccbe2dbda0f6147661afb64016b732ed176" relative="tests/js/JSTest.php"/>
+  <docblock>
+    <description compact="JS minifier test case."/>
+  </docblock>
+  <extends full="PHPUnit_Framework_TestCase" namespace="" name="PHPUnit_Framework_TestCase" unresolved="true"/>
+  <member name="minifier" visibility="private" static="false" line="13">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="Minify\JS" namespace="Minify" name="JS"/>
+      </var>
+    </docblock>
+  </member>
+  <method name="setUp" start="18" end="26" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Prepares the environment before running a test."/>
+    </docblock>
+    <inline>
+      <comment value="override save method, there's no point in writing the result out here" line="22"/>
+    </inline>
+  </method>
+  <method name="tearDown" start="31" end="35" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Cleans up the environment after running a test."/>
+    </docblock>
+  </method>
+  <method name="minify" start="43" end="54" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test JS minifier rules, provided by dataProvider."/>
+      <test/>
+      <dataprovider value="dataProvider"/>
+    </docblock>
+    <parameter name="input" byreference="false" type="{unknown}"/>
+    <parameter name="expected" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="dataProvider" start="59" end="715" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return description="[input, expected result]" type="array"/>
+    </docblock>
+    <inline>
+      <comment value="escaped quotes should not terminate string" line="63"/>
+      <comment value="backtick string (allow string interpolation)" line="69"/>
+      <comment value="regex delimiters need to be treated as strings" line="75"/>
+      <comment value="(two forward slashes could look like a comment)" line="76"/>
+      <comment value="don't confuse multiple slashes for regexes" line="86"/>
+      <comment value="mixture of quotes starting in comment/regex, to make sure strings are" line="98"/>
+      <comment value="matched correctly, not inside comment/regex" line="99"/>
+      <comment value="additionally test catching of empty strings as well" line="100"/>
+      <comment value="replace comments" line="115"/>
+      <comment value="make sure no ; is added in places it shouldn't" line="121"/>
+      <comment value="test where newline should be preserved (for ASI) or semicolon added" line="163"/>
+      <comment value="test if whitespace around keywords is properly collapsed" line="251"/>
+      <comment value="remove whitespace around operators" line="278"/>
+      <comment value="mix of ++ and +: three consecutive +es will be interpreted as ++ +" line="297"/>
+      <comment value="SyntaxError: identifier starts immediately after numeric literal" line="307"/>
+      <comment value="add comment in between whitespace that needs to be stripped" line="313"/>
+      <comment value="add comment in between whitespace that needs to be stripped" line="321"/>
+      <comment value="random bits of code that tripped errors during development" line="331"/>
+      <comment value="replace associative array key references by property notation" line="394"/>
+      <comment value="shorten bools" line="417"/>
+      <comment value="make sure we don't get &quot;missing while after do-loop body&quot;" line="422"/>
+      <comment value="nested do-while &amp; while" line="439"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/10" line="453"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/14" line="471"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/15" line="485"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/27" line="500"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/31" line="506"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/33" line="512"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/34" line="520"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/35" line="526"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/37" line="535"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/40" line="541"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/41" line="547"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/42" line="553"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/43" line="563"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/44" line="569"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/50" line="575"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/53" line="581"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/54" line="600"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/56" line="614"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/58" line="622"/>
+      <comment value="stripped of redundant code to expose problem case" line="623"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/59" line="640"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/64" line="648"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/66" line="660"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/89" line="670"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/91" line="676"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/99" line="682"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/102" line="688"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/108" line="698"/>
+      <comment value="update tests' expected results for cross-system compatibility" line="707"/>
+    </inline>
+  </method>
+</class>

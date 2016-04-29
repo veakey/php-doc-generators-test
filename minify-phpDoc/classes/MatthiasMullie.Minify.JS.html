@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/MatthiasMullie.html">\MatthiasMullie</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">37</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1264291578"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1264291578" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1111962011"></a>
+                                <a href="../namespaces/MatthiasMullie.html" style="margin-left: 30px; padding-left: 0">MatthiasMullie</a>
+            </div>
+            <div id="namespace-1111962011" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1220334091"></a>
+                                <a href="../namespaces/MatthiasMullie.Minify.html" style="margin-left: 30px; padding-left: 0">Minify</a>
+            </div>
+            <div id="namespace-1220334091" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1265920620"></a>
+                                <a href="../namespaces/MatthiasMullie.Minify.Exceptions.html" style="margin-left: 30px; padding-left: 0">Exceptions</a>
+            </div>
+            <div id="namespace-1265920620" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/MatthiasMullie.Minify.Exceptions.BasicException.html">BasicException</a></li>
+                                                    <li class="class"><a href="../classes/MatthiasMullie.Minify.Exceptions.FileImportException.html">FileImportException</a></li>
+                                                    <li class="class"><a href="../classes/MatthiasMullie.Minify.Exceptions.IOException.html">IOException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/MatthiasMullie.Minify.CSS.html">CSS</a></li>
+                                                    <li class="class"><a href="../classes/MatthiasMullie.Minify.Exception.html">Exception</a></li>
+                                                    <li class="class"><a href="../classes/MatthiasMullie.Minify.JS.html">JS</a></li>
+                                                    <li class="class"><a href="../classes/MatthiasMullie.Minify.Minify.html">Minify</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/CommonTest.html">CommonTest</a></li>
+                                                    <li class="class"><a href="../classes/CSSTest.html">CSSTest</a></li>
+                                                    <li class="class"><a href="../classes/JSTest.html">JSTest</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/MatthiasMullie.Minify.html">\MatthiasMullie\Minify</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\MatthiasMullie\Minify</small>JS</h1>
+                    <p><em>JavaScript minifier.</em></p>
+                    <p>Please report bugs on <a href="https://github.com/matthiasmullie/minify/issues">https://github.com/matthiasmullie/minify/issues</a></p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_add" class="">add()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_minify" class="">minify()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_gzip" class="">gzip()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_cache" class="">cache()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_execute" class="">execute()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#property_extracted" class="">$extracted</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#constant_REGEX_VARIABLE" class="">REGEX_VARIABLE</a><br />
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_load" class="">load()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_save" class="">save()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_registerPattern" class="">registerPattern()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_replace" class="">replace()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_replacePattern" class="">replacePattern()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_extractStrings" class="">extractStrings()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_restoreExtractedData" class="">restoreExtractedData()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_canImportFile" class="">canImportFile()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_openFileForWriting" class="">openFileForWriting()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#method_writeToFile" class="">writeToFile()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_stripComments" class="">stripComments()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_extractRegex" class="">extractRegex()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_stripWhitespace" class="">stripWhitespace()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_getOperatorsForRegex" class="">getOperatorsForRegex()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_getKeywordsForRegex" class="">getKeywordsForRegex()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_propertyNotation" class="">propertyNotation()</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#method_shortenBools" class="">shortenBools()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#property_data" class="">$data</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.Minify.html#property_patterns" class="">$patterns</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#property_keywordsReserved" class="">$keywordsReserved</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#property_keywordsBefore" class="">$keywordsBefore</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#property_keywordsAfter" class="">$keywordsAfter</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#property_operatorsBefore" class="">$operatorsBefore</a><br />
+                                                                    <a href="../classes/MatthiasMullie.Minify.JS.html#property_operatorsAfter" class="">$operatorsAfter</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/src.JS.html"><div class="path-wrapper">src/JS.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper"><a href="../classes/MatthiasMullie.Minify.Minify.html">\MatthiasMullie\Minify\Minify</a></div>
+                                                                                                    <div class="namespace-wrapper">\MatthiasMullie\Minify\JS</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Matthias Mullie <a href="mailto:minify@mullie.eu">minify@mullie.eu</a></p>
+                                                                    <p>Tijs Verkoyen <a href="mailto:minify@verkoyen.eu">minify@verkoyen.eu</a></p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                copyright
+                            </th>
+                            <td>
+                                                                    <p>Copyright (c) 2012, Matthias Mullie. All rights reserved.</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                license
+                            </th>
+                            <td>
+                                                                    <p>MIT License</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                                    <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_REGEX_VARIABLE" name="constant_REGEX_VARIABLE" class="anchor"></a>
+            <article id="constant_REGEX_VARIABLE" class="constant">
+                <h3 class="">REGEX_VARIABLE</h3>
+                <pre class="signature">REGEX_VARIABLE</pre>
+                <p><em>Var-matching regex based on http://stackoverflow.com/a/9337047/802993.</em></p>
+                <p>Note that regular expressions using that bit must have the PCRE_UTF8
+pattern modifier (/u) set.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_extracted" name="property_extracted" class="anchor"></a>
+            <article class="property">
+                <h3 class="public ">$extracted</h3>
+                <pre class="signature">$extracted : array&lt;mixed,string&gt;</pre>
+                <p><em>This array will hold content of strings and regular expressions that have
+been extracted from the JS source code, so we can reliably match &quot;code&quot;,
+without having to worry about potential &quot;code-like&quot; characters inside.</em></p>
+                
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_data" name="property_data" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$data</h3>
+                <pre class="signature">$data : array&lt;mixed,string&gt;</pre>
+                <p><em>The data to be minified.</em></p>
+                
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_patterns" name="property_patterns" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$patterns</h3>
+                <pre class="signature">$patterns : array&lt;mixed,string&gt;</pre>
+                <p><em>Array of patterns to match.</em></p>
+                
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_keywordsReserved" name="property_keywordsReserved" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$keywordsReserved</h3>
+                <pre class="signature">$keywordsReserved : array&lt;mixed,string&gt;</pre>
+                <p><em>Full list of JavaScript reserved words.</em></p>
+                <p>Will be loaded from /data/js/keywords_reserved.txt.</p>
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_keywordsBefore" name="property_keywordsBefore" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$keywordsBefore</h3>
+                <pre class="signature">$keywordsBefore : array&lt;mixed,string&gt;</pre>
+                <p><em>List of JavaScript reserved words that accept a &lt;variable, value, .</em></p>
+                <p>..&gt;
+after them. Some end of lines are not the end of a statement, like with
+these keywords.</p>
+<p>E.g.: we shouldn't insert a ; after this else
+else
+console.log('this is quite fine')</p>
+<p>Will be loaded from /data/js/keywords_before.txt</p>
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_keywordsAfter" name="property_keywordsAfter" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$keywordsAfter</h3>
+                <pre class="signature">$keywordsAfter : array&lt;mixed,string&gt;</pre>
+                <p><em>List of JavaScript reserved words that accept a &lt;variable, value, .</em></p>
+                <p>..&gt;
+before them. Some end of lines are not the end of a statement, like when
+continued by one of these keywords on the newline.</p>
+<p>E.g.: we shouldn't insert a ; before this instanceof
+variable
+instanceof String</p>
+<p>Will be loaded from /data/js/keywords_after.txt</p>
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_operatorsBefore" name="property_operatorsBefore" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$operatorsBefore</h3>
+                <pre class="signature">$operatorsBefore : array&lt;mixed,string&gt;</pre>
+                <p><em>List of JavaScript operators that accept a &lt;variable, value, .</em></p>
+                <p>..&gt; after
+them. Some end of lines are not the end of a statement, like with these
+operators.</p>
+<p>Note: Most operators are fine, we've only removed !, ++ and --.
+There can't be a newline separating ! and whatever it is negating.
+++ &amp; -- have to be joined with the value they're in-/decrementing.</p>
+<p>Will be loaded from /data/js/operators_before.txt</p>
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_operatorsAfter" name="property_operatorsAfter" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$operatorsAfter</h3>
+                <pre class="signature">$operatorsAfter : array&lt;mixed,string&gt;</pre>
+                <p><em>List of JavaScript operators that accept a &lt;variable, value, .</em></p>
+                <p>..&gt; before
+them. Some end of lines are not the end of a statement, like when
+continued by one of these operators on the newline.</p>
+<p>Note: Most operators are fine, we've only removed ), ], ++ and --.
+++ &amp; -- have to be joined with the value they're in-/decrementing.
+) &amp; ] are &quot;special&quot; in that they have lots or usecases. () for example
+is used for function calls, for grouping, in if () and for (), ...</p>
+<p>Will be loaded from /data/js/operators_after.txt</p>
+
+                                <h4>Type</h4>
+                array&lt;mixed,string&gt;
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper"></span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct() </pre>
+                <p><em>Init the minify class - optionally, code may be passed along already.</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_add" name="method_add" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">add()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">add(string  <span class="argument">$data</span>) </pre>
+                <p><em>Add a file or straight-up code to be minified.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$data </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_minify" name="method_minify" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">minify()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">minify(\MatthiasMullie\Minify\string[optional]  <span class="argument">$path = null</span>) : string</pre>
+                <p><em>Minify the data &amp; (optionally) saves it to a file.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\MatthiasMullie\Minify\string[optional]</td>
+                                <td>$path </td>
+                                <td><p>Path to write the data to.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The minified data.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_gzip" name="method_gzip" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">gzip()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">gzip(\MatthiasMullie\Minify\string[optional]  <span class="argument">$path = null</span>, \MatthiasMullie\Minify\int[optional]  <span class="argument">$level = 9</span>) : string</pre>
+                <p><em>Minify &amp; gzip the data &amp; (optionally) saves it to a file.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\MatthiasMullie\Minify\string[optional]</td>
+                                <td>$path </td>
+                                <td><p>Path to write the data to.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>\MatthiasMullie\Minify\int[optional]</td>
+                                <td>$level </td>
+                                <td><p>Compression level, from 0 to 9.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The minified &amp; gzipped data.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_cache" name="method_cache" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">cache()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">cache(\Psr\Cache\CacheItemInterface  <span class="argument">$item</span>) : \Psr\Cache\CacheItemInterface</pre>
+                <p><em>Minify the data &amp; write it to a CacheItemInterface object.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\Psr\Cache\CacheItemInterface</td>
+                                <td>$item </td>
+                                <td><p>Cache item to write the data to.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Psr\Cache\CacheItemInterface
+                                            &mdash; <p>Cache item with the minifier data.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_execute" name="method_execute" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">execute()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">execute(\MatthiasMullie\Minify\string[optional]  <span class="argument">$path = null</span>) : string</pre>
+                <p><em>Minify the data.</em></p>
+                <p>Perform JS optimizations.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\MatthiasMullie\Minify\string[optional]</td>
+                                <td>$path </td>
+                                <td><p>Path to write the data to.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The minified data.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_load" name="method_load" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">load()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">load(string  <span class="argument">$data</span>) : string</pre>
+                <p><em>Load data.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$data </td>
+                                <td><p>Either a path to a file or the content itself.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_save" name="method_save" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">save()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">save(string  <span class="argument">$content</span>, string  <span class="argument">$path</span>) </pre>
+                <p><em>Save to file.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td><p>The minified data.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td><p>The path to save the minified data to.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\MatthiasMullie\Minify\Exceptions\IOException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_registerPattern" name="method_registerPattern" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">registerPattern()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">registerPattern(string  <span class="argument">$pattern</span>, string|callable  <span class="argument">$replacement = &#039;&#039;</span>) </pre>
+                <p><em>Register a pattern to execute against the source content.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$pattern </td>
+                                <td><p>PCRE pattern.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string|callable</td>
+                                <td>$replacement </td>
+                                <td><p>Replacement value for matched pattern.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_replace" name="method_replace" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">replace()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">replace(string  <span class="argument">$content</span>) : string</pre>
+                <p><em>We can&#039;t &quot;just&quot; run some regular expressions against JavaScript: it&#039;s a
+complex language. E.g. having an occurrence of // xyz would be a comment,
+unless it&#039;s used within a string. Of you could have something that looks
+like a &#039;string&#039;, but inside a comment.</em></p>
+                <p>The only way to accurately replace these pieces is to traverse the JS one
+character at a time and try to find whatever starts first.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td><p>The content to replace patterns in.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>The (manipulated) content.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_replacePattern" name="method_replacePattern" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">replacePattern()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">replacePattern(string  <span class="argument">$pattern</span>, string|callable  <span class="argument">$replacement</span>, string  <span class="argument">$content</span>) : string</pre>
+                <p><em>This is where a pattern is matched against $content and the matches
+are replaced by their respective value.</em></p>
+                <p>This function will be called plenty of times, where $content will always
+move up 1 character.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$pattern </td>
+                                <td><p>Pattern to match.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string|callable</td>
+                                <td>$replacement </td>
+                                <td><p>Replacement value.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td><p>Content to match pattern against.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_extractStrings" name="method_extractStrings" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">extractStrings()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">extractStrings(\MatthiasMullie\Minify\string[optional]  <span class="argument">$chars = &#039;\&#039;&quot;&#039;</span>) </pre>
+                <p><em>Strings are a pattern we need to match, in order to ignore potential
+code-like content inside them, but we just want all of the string
+content to remain untouched.</em></p>
+                <p>This method will replace all string content with simple STRING#
+placeholder text, so we've rid all strings from characters that may be
+misinterpreted. Original string content will be saved in $this-&gt;extracted
+and after doing all other minifying, we can restore the original content
+via restoreStrings().</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\MatthiasMullie\Minify\string[optional]</td>
+                                <td>$chars </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_restoreExtractedData" name="method_restoreExtractedData" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">restoreExtractedData()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">restoreExtractedData(string  <span class="argument">$content</span>) : string</pre>
+                <p><em>This method will restore all extracted data (strings, regexes) that were
+replaced with placeholder text in extract*(). The original content was
+saved in $this-&gt;extracted.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_canImportFile" name="method_canImportFile" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">canImportFile()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">canImportFile(string  <span class="argument">$path</span>) : boolean</pre>
+                <p><em>Check if the path is a regular file and can be read.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_openFileForWriting" name="method_openFileForWriting" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">openFileForWriting()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">openFileForWriting(string  <span class="argument">$path</span>) : resource</pre>
+                <p><em>Attempts to open file specified by $path for writing.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td><p>The path to the file.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\MatthiasMullie\Minify\Exceptions\IOException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    resource
+                                            &mdash; <p>Specifier for the target file.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_writeToFile" name="method_writeToFile" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">writeToFile()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">writeToFile(resource  <span class="argument">$handler</span>, string  <span class="argument">$content</span>, string  <span class="argument">$path = &#039;&#039;</span>) </pre>
+                <p><em>Attempts to write $content to the file specified by $handler. $path is used for printing exceptions.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>resource</td>
+                                <td>$handler </td>
+                                <td><p>The resource to write to.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td><p>The content to write.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td><p>The path to the file (for exception printing only).</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\MatthiasMullie\Minify\Exceptions\IOException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/MatthiasMullie.Minify.Minify.html"><div class="path-wrapper">\MatthiasMullie\Minify\Minify</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_stripComments" name="method_stripComments" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">stripComments()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">stripComments() </pre>
+                <p><em>Strip comments from source code.</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_extractRegex" name="method_extractRegex" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">extractRegex()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">extractRegex() </pre>
+                <p><em>JS can have /-delimited regular expressions, like: /ab+c/.match(string).</em></p>
+                <p>The content inside the regex can contain characters that may be confused
+for JS code: e.g. it could contain whitespace it needs to match &amp; we
+don't want to strip whitespace in there.</p>
+<p>The regex can be pretty simple: we don't have to care about comments,
+(which also use slashes) because stripComments() will have stripped those
+already.</p>
+<p>This method will replace all string content with simple REGEX#
+placeholder text, so we've rid all regular expressions from characters
+that may be misinterpreted. Original regex content will be saved in
+$this-&gt;extracted and after doing all other minifying, we can restore the
+original content via restoreRegex()</p>
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_stripWhitespace" name="method_stripWhitespace" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">stripWhitespace()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">stripWhitespace(string  <span class="argument">$content</span>) : string</pre>
+                <p><em>Strip whitespace.</em></p>
+                <p>We won't strip <em>all</em> whitespace, but as much as possible. The thing that
+we'll preserve are newlines we're unsure about.
+JavaScript doesn't require statements to be terminated with a semicolon.
+It will automatically fix missing semicolons with ASI (automatic semi-
+colon insertion) at the end of line causing errors (without semicolon.)</p>
+<p>Because it's sometimes hard to tell if a newline is part of a statement
+that should be terminated or not, we'll just leave some of them alone.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td><p>The content to strip the whitespace for.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getOperatorsForRegex" name="method_getOperatorsForRegex" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">getOperatorsForRegex()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getOperatorsForRegex(array&lt;mixed,string&gt;  <span class="argument">$operators</span>, string  <span class="argument">$delimiter = &#039;/&#039;</span>) : array&lt;mixed,string&gt;</pre>
+                <p><em>We&#039;ll strip whitespace around certain operators with regular expressions.</em></p>
+                <p>This will prepare the given array by escaping all characters.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array&lt;mixed,string&gt;</td>
+                                <td>$operators </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$delimiter </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,string&gt;
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getKeywordsForRegex" name="method_getKeywordsForRegex" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">getKeywordsForRegex()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getKeywordsForRegex(array&lt;mixed,string&gt;  <span class="argument">$keywords</span>, string  <span class="argument">$delimiter = &#039;/&#039;</span>) : array&lt;mixed,string&gt;</pre>
+                <p><em>We&#039;ll strip whitespace around certain keywords with regular expressions.</em></p>
+                <p>This will prepare the given array by escaping all characters.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array&lt;mixed,string&gt;</td>
+                                <td>$keywords </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$delimiter </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,string&gt;
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_propertyNotation" name="method_propertyNotation" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">propertyNotation()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">propertyNotation(string  <span class="argument">$content</span>) : string</pre>
+                <p><em>Replaces all occurrences of array[&#039;key&#039;] by array.key.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_shortenBools" name="method_shortenBools" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">shortenBools()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">shortenBools(string  <span class="argument">$content</span>) : string</pre>
+                <p><em>Replaces true &amp; false by !0 and !1.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$content </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">JS.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/src/JS.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/MatthiasMullie.html">\MatthiasMullie</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on April 29th, 2016 at 06:51.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

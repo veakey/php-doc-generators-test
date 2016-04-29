@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="CSSTest" namespace="" name="CSSTest" abstract="false" final="false" start="8" end="650">
+  <file path="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests/css" file="CSSTest.php" realpath="/home/dara/Documents/work/unigestion/php-doc-generator/minify/tests/css/CSSTest.php" size="22206" time="2016-04-29T04:18:41+00:00" unixtime="1461903521" sha1="3220e6aa7aeac1c0bcb8ae199437d007da1a912e" relative="tests/css/CSSTest.php"/>
+  <docblock>
+    <description compact="CSS minifier test case."/>
+  </docblock>
+  <extends full="PHPUnit_Framework_TestCase" namespace="" name="PHPUnit_Framework_TestCase" unresolved="true"/>
+  <member name="minifier" visibility="private" static="false" line="13">
+    <docblock>
+      <description/>
+      <var type="object">
+        <type full="Minify\CSS" namespace="Minify" name="CSS"/>
+      </var>
+    </docblock>
+  </member>
+  <method name="setUp" start="18" end="26" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Prepares the environment before running a test."/>
+    </docblock>
+    <inline>
+      <comment value="override save method, there's no point in writing the result out here" line="22"/>
+    </inline>
+  </method>
+  <method name="tearDown" start="31" end="35" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Cleans up the environment after running a test."/>
+    </docblock>
+  </method>
+  <method name="minify" start="43" end="53" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test CSS minifier rules, provided by dataProvider."/>
+      <test/>
+      <dataprovider value="dataProvider"/>
+    </docblock>
+    <parameter name="input" byreference="false" type="{unknown}"/>
+    <parameter name="expected" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="convertRelativePath" start="61" end="84" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test conversion of relative paths, provided by dataProviderPaths."/>
+      <test/>
+      <dataprovider value="dataProviderPaths"/>
+    </docblock>
+    <parameter name="source" byreference="false" type="{unknown}"/>
+    <parameter name="target" byreference="false" type="{unknown}"/>
+    <parameter name="expected" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="fileImportLoop" start="93" end="100" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test loop while importing file."/>
+      <test/>
+      <expectedexception value="MatthiasMullie\Minify\Exceptions\FileImportException"/>
+    </docblock>
+  </method>
+  <method name="setConfig" start="107" end="121" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Test minifier import configuration methods."/>
+      <test/>
+    </docblock>
+  </method>
+  <method name="dataProvider" start="126" end="427" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return description="[input, expected result]" type="array"/>
+    </docblock>
+    <inline>
+      <comment value="try importing, with both @import syntax types &amp; media queries" line="130"/>
+      <comment value="shorthand hex color codes" line="156"/>
+      <comment value="import files" line="162"/>
+      <comment value="strip comments" line="168"/>
+      <comment value="strip whitespace" line="174"/>
+      <comment value="whitespace inside strings shouldn't be replaced" line="180"/>
+      <comment value="https://github.com/forkcms/forkcms/issues/387" line="218"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="CSS backslash." line="219"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="* Backslash escaped by backslash in CSS" line="220"/>
+      <comment xmlns="http://xml.phpdox.net/src" value="* Double CSS backslashed escaped twice for in PHP string" line="221"/>
+      <comment value="strip BOM" line="230"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/22" line="236"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/23" line="242"/>
+      <comment value="edge cases for stripping zeroes" line="252"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/24" line="306"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/25" line="312"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/26" line="318"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/28" line="324"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/31" line="330"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/49" line="336"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/68" line="344"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/67" line="350"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/74" line="364"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/92" line="383"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/103" line="404"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/104" line="410"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/107" line="416"/>
+    </inline>
+  </method>
+  <method name="dataProviderPaths" start="432" end="649" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return description="[input, expected result]" type="array"/>
+    </docblock>
+    <inline>
+      <comment value="external link" line="439"/>
+      <comment value="absolute path" line="446"/>
+      <comment value="relative paths" line="453"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/29" line="465"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/38" line="472"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/39" line="479"/>
+      <comment value="https://github.com/forkcms/forkcms/issues/1121" line="499"/>
+      <comment value="https://github.com/forkcms/forkcms/issues/1186" line="506"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/77#issuecomment-172844822" line="516"/>
+      <comment value="from and/or to are relative links" line="526"/>
+      <comment value="note: relative target only works if the file already exists: it has" line="532"/>
+      <comment value="to be able to realpath()" line="533"/>
+      <comment value="import symlinked files: relative, absolute &amp; mix" line="550"/>
+      <comment value="move symlinked files: relative, absolute &amp; mix" line="572"/>
+      <comment value="import symlinked folders: relative, absolute &amp; mix" line="594"/>
+      <comment value="move symlinked folders: relative, absolute &amp; mix" line="616"/>
+      <comment value="https://github.com/matthiasmullie/minify/issues/100" line="638"/>
+    </inline>
+  </method>
+</class>

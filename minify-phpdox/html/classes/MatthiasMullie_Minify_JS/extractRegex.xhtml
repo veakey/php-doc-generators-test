@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#MatthiasMullie_Minify">MatthiasMullie\Minify</a>
+          </li>
+          <li class="separator">
+            <a title="MatthiasMullie\Minify\JS" href="../../classes/MatthiasMullie_Minify_JS.xhtml">JS</a>
+          </li>
+          <li class="separator">extractRegex</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="../../source/src/JS.php.xhtml#line201">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>MatthiasMullie\Minify\JS::</small>extractRegex</h1>
+        <h4>JS can have /-delimited regular expressions, like: /ab+c/.match(string).</h4>
+        <p>The content inside the regex can contain characters that may be confused
+for JS code: e.g. it could contain whitespace it needs to match &amp; we
+don't want to strip whitespace in there.
+
+The regex can be pretty simple: we don't have to care about comments,
+(which also use slashes) because stripComments() will have stripped those
+already.
+
+This method will replace all string content with simple REGEX#
+placeholder text, so we've rid all regular expressions from characters
+that may be misinterpreted. Original regex content will be saved in
+$this-&gt;extracted and after doing all other minifying, we can restore the
+original content via restoreRegex()</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>protected function extractRegex()
+            </code>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
